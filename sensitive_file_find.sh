@@ -14,6 +14,14 @@ sensitive_scan() {
     mkdir -p "${base_dir}/exposure/"
 
     dirsearch -u "${domain}" -r -w '/root/main/wordlist/cgi-bin.txt' -o "${base_dir}/exposure/cgi-bin.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/cgi-files.txt' -o "${base_dir}/exposure/cgi-files.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/config.txt' -o "${base_dir}/exposure/config.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/ec2.txt' -o "${base_dir}/exposure/ec2.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/env.txt' -o "${base_dir}/exposure/env.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/git_config.txt' -o "${base_dir}/exposure/git_config.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/keys.txt' -o "${base_dir}/exposure/keys.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/leaky-misconfigs.txt' -o "${base_dir}/exposure/leaky-misconfigs.txt"
+    dirsearch -u "${domain}" -r -w '/root/main/wordlist/log.txt' -o "${base_dir}/exposure/log.txt"
 
 }
 

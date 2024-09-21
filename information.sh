@@ -16,12 +16,12 @@ scan_information() {
     # javaScript files
     echo "Scanning for JavaScript files on ${domain}..."
     
-    echo "${domain}" | katana | grep "\.js$" | httpx -mc 200 | tee "${base_dir}/js.txt"
-    echo "${domain}" | gau | grep "\.js$" | httpx -mc 200 | tee "${base_dir}/js.txt"
+    # echo "${domain}" | katana | grep "\.js$" | httpx -mc 200 | tee "${base_dir}/js.txt"
+    # echo "${domain}" | gau | grep "\.js$" | httpx -mc 200 | tee "${base_dir}/js.txt"
 
         
-    katana ${domain} | grep "\.js$" | httpx -mc 200 | tee -a "${base_dir}/js.txt"
-    gau ${domain} | grep "\.js$" | httpx -mc 200 | tee -a "${base_dir}/js.txt"
+    # katana ${domain} | grep "\.js$" | httpx -mc 200 | tee -a "${base_dir}/js.txt"
+    # gau ${domain} | grep "\.js$" | httpx -mc 200 | tee -a "${base_dir}/js.txt"
     
     # cat "${base_dir}/allurls.txt" | grep "\.js$"  "${base_dir}/allurls.txt" | httpx -mc 200 | tee "${base_dir}/js.txt"
     grep "\.js$"  "${base_dir}/allurls.txt" | httpx -mc 200 | tee "${base_dir}/js.txt"
