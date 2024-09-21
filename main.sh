@@ -9,7 +9,7 @@ fi
 domain=$1
 
 # Ensure all required scripts are executable
-chmod +x subdomain_find.sh url_find.sh information.sh port_find.sh
+chmod +x subdomain_find.sh url_find.sh information.sh port_find.sh sensitive_file_find.sh
 
 # Run subdomain enumeration 
 echo "Starting subdomain enumeration..."
@@ -25,6 +25,10 @@ echo "Starting JavaScript file analysis..."
 
 # Run port scanning 
 echo "Starting port scanning..."
-./port_find.sh "$domain"
+./port_scan.sh "$domain"
+
+# Run files scanning 
+echo "Starting files scanning..."
+./sensitive_file_find.sh "$domain"
 
 echo "All tasks completed for ${domain}. Results are stored in the respective directories."
