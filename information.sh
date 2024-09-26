@@ -63,7 +63,7 @@ scan_information() {
 
     # billngs
     grep -r --color=always -i -E "invoice|price|billing|payment" "${base_dir}/allurls.txt" >> "${base_dir}/information/billings.txt"
-    grep -r --color=always -i -E "invoice|billing|payment|receipt|pay|bill|purchase|order|checkout|paynow|transaction" "${base_dir}/allurls.txt" >> "${base_dir}/information/pay.txt"
+    grep -r --color=always -i -E "invoice|billing|payment|receipt|pay|bill|purchase|order|checkout|paynow|transaction|rcpt" "${base_dir}/allurls.txt" >> "${base_dir}/information/pay.txt"
 
     
     # orders related urls
@@ -81,7 +81,7 @@ scan_information() {
     grep -r --color=always -i -E "register|signin|signup|forgotpassword|forgot-password|login|profile" "${base_dir}/allurls.txt" >> "${base_dir}/information/credentials.txt"
 
     # personal informations url
-    grep -r --color=always -i -E "firstName|lastName|address|phone|resume" "${base_dir}/allurls.txt" >> "${base_dir}/information/personal_information.txt"
+    grep -r --color=always -i -E "firstName|FirstName|lastName|LastName|address|phone|Phone|resume" "${base_dir}/allurls.txt" >> "${base_dir}/information/personal_information.txt"
 
     #search sensitive files 
     # waybackurls "${domain}" | grep - -color -E "1.xls | \\. xml | \\.xlsx | \\.json | \\. pdf | \\.sql | \\. doc| \\.docx | \\. pptx| \\.txt| \\.zip| \\.tar.gz| \\.tgz| \\.bak| \\.7z| \\.rar" >> "${base_dir}/information/file.txt"

@@ -266,24 +266,24 @@ deactivate
 # exploit installation
 
 # xss 
-# echo "Installing qsreplace..."
-# go install -v github.com/tomnomnom/qsreplace@latest
-# sudo cp ~/go/bin/qsreplace /usr/bin/
+echo "Installing qsreplace..."
+go install -v github.com/tomnomnom/qsreplace@latest
+sudo cp ~/go/bin/qsreplace /usr/bin/
 
-# echo "Installing freq..."
-# go install github.com/takshal/freq@latest
-# sudo cp ~/go/bin/freq /usr/bin/
+echo "Installing freq..."
+go install github.com/takshal/freq@latest
+sudo cp ~/go/bin/freq /usr/bin/
 
-# echo "Installing dalfox"
-# go install github.com/hahwul/dalfox/v2@latest
-# sudo cp ~/go/bin/dalfox /usr/bin/
+echo "Installing dalfox"
+go install github.com/hahwul/dalfox/v2@latest
+sudo cp ~/go/bin/dalfox /usr/bin/
 
-# go install github.com/KathanP19/Gxss@latest
-# sudo cp ~/go/bin/Gxss /usr/bin/
+go install github.com/KathanP19/Gxss@latest
+sudo cp ~/go/bin/Gxss /usr/bin/
 
 # sql
-# pipx install git+https://github.com/r0oth3x49/ghauri.git
-# pipx ensurepath
+pipx install git+https://github.com/r0oth3x49/ghauri.git
+pipx ensurepath
 
 # directory transversal
 # sudo apt-get install -y git perl libwww-perl
@@ -303,9 +303,6 @@ deactivate
 # source liffy/bin/activate
 # pip3 install -r requirements.txt
 # deactivate
-
-
-# extra tools 
 
 
 
